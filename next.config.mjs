@@ -1,22 +1,10 @@
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
   output: 'export',
-
-  reactStrictMode: true,
-
-  compress: true,
-
-  poweredByHeader: false,
-
-  trailingSlash: true,
-
+  basePath: '/Stepaccademy',
+  assetPrefix: '/Stepaccademy/',
   images: {
     unoptimized: true,
-  },
-
-  experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 };
 
