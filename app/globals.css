@@ -313,23 +313,86 @@ h2 {
    ========================================================= */
 
 .hero {
-  min-height: 720px;
+  position: relative;
+  min-height: 760px;
   display: grid;
   grid-template-columns: 1.02fr 0.98fr;
   align-items: center;
   gap: 55px;
-  background-image:
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 45%,
+      rgba(217, 182, 111, 0.14),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 18% 30%,
+      rgba(40, 85, 130, 0.16),
+      transparent 34%
+    ),
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 64px 64px;
-  background-position: center;
-  overflow: hidden;
+
+  background-size:
+    auto,
+    auto,
+    64px 64px,
+    64px 64px;
+
+  background-position:
+    center,
+    center,
+    center,
+    center;
 }
 
 .hero h1 {
+  max-width: 760px;
   font-size: clamp(52px, 7vw, 92px);
   line-height: 0.94;
   margin: 20px 0 25px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+
+  text-shadow:
+    0 8px 35px rgba(0, 0, 0, 0.28);
+}
+
+.hero-highlight {
+  color: var(--gold2);
+
+  background:
+    linear-gradient(
+      120deg,
+      var(--gold),
+      var(--gold2),
+      #fff1bd,
+      var(--gold)
+    );
+
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: goldShimmer 6s ease-in-out infinite;
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .hero-copy {
@@ -340,6 +403,21 @@ h2 {
   display: flex;
   gap: 12px;
   margin-top: 28px;
+}
+
+.hero-actions .btn {
+  min-height: 48px;
+  border-radius: 8px;
+}
+
+.hero-actions .btn.primary {
+  box-shadow:
+    0 12px 30px rgba(217, 182, 111, 0.20);
+}
+
+.hero-actions .btn.primary:hover {
+  box-shadow:
+    0 16px 40px rgba(217, 182, 111, 0.30);
 }
 
 .stats {
@@ -371,30 +449,73 @@ h2 {
 
 .hero-visual {
   position: relative;
-  min-height: 500px;
+  min-height: 520px;
   display: grid;
   place-items: center;
 }
 
+.hero-visual::before {
+  content: "";
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background: rgba(217, 182, 111, 0.10);
+
+  filter: blur(70px);
+
+  pointer-events: none;
+}
 .hero-image {
-  width: min(100%, 600px);
+  position: relative;
+  width: min(100%, 620px);
   aspect-ratio: 1.08 / 1;
   object-fit: cover;
-  border: 14px solid var(--panel);
-  outline: 1px solid var(--line);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+
+  border: 8px solid rgba(13, 28, 49, 0.92);
+  border-radius: 24px;
+
+  outline: 1px solid rgba(217, 182, 111, 0.35);
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(217, 182, 111, 0.08),
+    0 0 70px rgba(217, 182, 111, 0.08);
+
   animation: float 6s ease-in-out infinite;
 }
 
 .float-label {
   position: absolute;
-  padding: 12px 16px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  font-size: 11px;
+
+  padding: 13px 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 28, 49, 0.96),
+      rgba(7, 20, 38, 0.94)
+    );
+
+  border: 1px solid rgba(217, 182, 111, 0.38);
+
+  border-radius: 10px;
+
+  color: var(--text);
+
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.08em;
-  box-shadow: var(--shadow);
+  letter-spacing: 0.11em;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(217, 182, 111, 0.06);
+
+  backdrop-filter: blur(12px);
+
   animation: float2 4s ease-in-out infinite;
 }
 
@@ -453,7 +574,13 @@ h2 {
   aspect-ratio: 16 / 10;
   width: 100%;
   object-fit: cover;
+  object-position: center 20%;
   display: block;
+}
+
+.teacher-card .image-card {
+  aspect-ratio: 16 / 11;
+  object-position: center 20%;
 }
 
 .teacher-card {
@@ -1031,17 +1158,29 @@ th {
   }
 
   .hero {
-    min-height: auto;
-    padding: 55px 0;
-  }
+  min-height: auto;
+  padding: 65px 0 75px;
+}
 
   .hero h1 {
     font-size: clamp(44px, 14vw, 70px);
   }
 
   .hero-visual {
-    min-height: 350px;
-  }
+  min-height: 390px;
+  margin-top: 10px;
+}
+.hero-image {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 0.88;
+  border-width: 6px;
+  border-radius: 18px;
+}
+
+.hero-highlight {
+  white-space: nowrap;
+}
 
   .float-label {
     font-size: 9px;
@@ -1056,9 +1195,16 @@ th {
     grid-template-columns: 1fr;
   }
 
+  .teacher-card .image-card {
+  aspect-ratio: 16 / 11.5;
+  min-height: 120px;
+  object-position: center 18%;
+}
+
+
   .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: 12px;
   }
 
   .card-body {
