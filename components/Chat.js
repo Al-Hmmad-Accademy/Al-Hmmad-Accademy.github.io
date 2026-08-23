@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 const API =
-  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app';
+  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app/api';
 
 const SOCKET_URL =
   process.env.NEXT_PUBLIC_SOCKET_URL ||
