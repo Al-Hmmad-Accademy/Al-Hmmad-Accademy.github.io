@@ -1308,3 +1308,544 @@ th {
     padding: 10px;
   }
 }
+
+/* =========================================================
+   FINAL LUXURY HERO OVERRIDE
+   Paste this at the VERY END of globals.css
+   ========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 780px;
+
+  /* REMOVE BACKGROUND GRID */
+  background-image: none !important;
+
+  /* Premium dark luxury background */
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(217, 182, 111, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 8% 70%,
+      rgba(26, 63, 105, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #030914 0%,
+      #071426 48%,
+      #040b16 100%
+    ) !important;
+
+  overflow: hidden;
+}
+
+/* Subtle luxury glow behind whole hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 72% 50%,
+      rgba(240, 211, 143, 0.055),
+      transparent 42%
+    );
+
+  z-index: 0;
+}
+
+/* Keep actual hero content above glow */
+.hero > *,
+.hero .container,
+.hero-copy,
+.hero-visual {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.hero h1 {
+  max-width: 720px;
+
+  font-family: "Manrope", sans-serif !important;
+  font-size: clamp(52px, 6.7vw, 90px);
+  line-height: 0.94;
+
+  font-weight: 800;
+  letter-spacing: -0.065em;
+
+  margin: 22px 0 28px;
+
+  /* Premium white → champagne gold gradient */
+  color: transparent !important;
+
+  background:
+    linear-gradient(
+      115deg,
+      #ffffff 0%,
+      #ffffff 34%,
+      #f8e7b5 63%,
+      #d9b66f 88%,
+      #ffffff 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  text-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.hero .eyebrow {
+  color: #f0d38f;
+
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.hero .eyebrow::before {
+  width: 42px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #f0d38f
+    );
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero .lead {
+  max-width: 650px;
+
+  color: #9eacc0;
+
+  font-size: 16px;
+  line-height: 1.85;
+
+  letter-spacing: 0.005em;
+}
+
+
+/* =========================================================
+   PREMIUM BUTTONS
+   ========================================================= */
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.hero-actions .btn {
+  min-height: 52px;
+
+  padding: 14px 22px;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(217, 182, 111, 0.38);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.hero-actions .btn.primary {
+  color: #081321 !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d9b66f,
+      #f0d38f,
+      #cda85d
+    ) !important;
+
+  border-color: #f0d38f !important;
+
+  box-shadow:
+    0 12px 35px rgba(217, 182, 111, 0.20);
+}
+
+.hero-actions .btn.primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 50px rgba(217, 182, 111, 0.32);
+}
+
+.hero-actions .btn:not(.primary) {
+  background: rgba(8, 18, 32, 0.55);
+
+  color: #f4f6fa !important;
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-actions .btn:not(.primary):hover {
+  transform: translateY(-3px);
+
+  border-color: #d9b66f;
+
+  background: rgba(217, 182, 111, 0.08);
+}
+
+
+/* =========================================================
+   HERO IMAGE — LUXURY FRAME
+   ========================================================= */
+
+.hero-visual {
+  position: relative;
+
+  min-height: 550px;
+
+  display: grid;
+  place-items: center;
+}
+
+/* Golden ambient glow */
+.hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(217, 182, 111, 0.15),
+      rgba(217, 182, 111, 0.045) 35%,
+      transparent 70%
+    );
+
+  filter: blur(18px);
+
+  pointer-events: none;
+}
+
+
+/* Image */
+.hero-image {
+  position: relative;
+
+  width: min(100%, 620px);
+
+  aspect-ratio: 1.08 / 1;
+
+  object-fit: cover;
+
+  border: 1px solid rgba(217, 182, 111, 0.42) !important;
+
+  border-radius: 22px;
+
+  outline: 8px solid rgba(7, 20, 38, 0.88);
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(217, 182, 111, 0.12),
+    0 0 55px rgba(217, 182, 111, 0.10);
+
+  animation: luxuryFloat 7s ease-in-out infinite;
+
+  z-index: 2;
+}
+
+
+/* Golden light around image */
+.hero-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 72%;
+  height: 72%;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(217, 182, 111, 0.10);
+
+  box-shadow:
+    0 0 45px rgba(217, 182, 111, 0.08);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   FLOATING LABELS
+   ========================================================= */
+
+.float-label {
+  position: absolute;
+
+  padding: 13px 17px;
+
+  color: #f5f7fb;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12, 25, 43, 0.97),
+      rgba(4, 12, 23, 0.96)
+    );
+
+  border: 1px solid rgba(217, 182, 111, 0.38);
+
+  border-radius: 10px;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.11em;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.42),
+    0 0 22px rgba(217, 182, 111, 0.07);
+
+  backdrop-filter: blur(14px);
+
+  z-index: 5;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.float-label:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(240, 211, 143, 0.75);
+}
+
+
+/* Position adjustments */
+.fl1 {
+  left: -2%;
+  top: 18%;
+}
+
+.fl2 {
+  right: -4%;
+  top: 25%;
+}
+
+.fl3 {
+  left: 3%;
+  bottom: 16%;
+}
+
+.fl4 {
+  right: 2%;
+  bottom: 12%;
+}
+
+
+/* =========================================================
+   HERO STATS
+   ========================================================= */
+
+.hero .stats {
+  margin-top: 58px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(217, 182, 111, 0.12);
+}
+
+.hero .stat {
+  border-left-color: rgba(217, 182, 111, 0.16);
+}
+
+.hero .stat b {
+  color: #f0d38f;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 25px;
+  letter-spacing: -0.02em;
+}
+
+.hero .stat small {
+  color: #8192aa;
+}
+
+
+/* =========================================================
+   LUXURY ANIMATION
+   ========================================================= */
+
+@keyframes luxuryFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.008);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+
+    padding: 85px 0 70px;
+
+    background:
+      radial-gradient(
+        circle at 50% 65%,
+        rgba(217, 182, 111, 0.08),
+        transparent 38%
+      ),
+      linear-gradient(
+        135deg,
+        #030914,
+        #071426,
+        #040b16
+      ) !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 11vw, 78px);
+  }
+
+  .hero-visual {
+    min-height: 500px;
+    margin-top: 15px;
+  }
+
+  .hero-image {
+    width: min(100%, 650px);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 65px 0 70px;
+
+    background:
+      radial-gradient(
+        circle at 50% 68%,
+        rgba(217, 182, 111, 0.07),
+        transparent 42%
+      ),
+      linear-gradient(
+        145deg,
+        #030914,
+        #071426
+      ) !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 13.5vw, 66px);
+
+    line-height: 0.96;
+
+    letter-spacing: -0.055em;
+
+    margin-top: 18px;
+  }
+
+  .hero .lead {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .hero-actions .btn {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  .hero-visual {
+    min-height: 390px;
+    margin-top: 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+
+    aspect-ratio: 1 / 0.88;
+
+    border-radius: 17px;
+
+    outline-width: 5px;
+  }
+
+  .hero-visual::before {
+    width: 330px;
+    height: 330px;
+  }
+
+  .float-label {
+    font-size: 8px;
+
+    padding: 9px 11px;
+
+    letter-spacing: 0.08em;
+  }
+
+  .fl1 {
+    left: -1%;
+    top: 17%;
+  }
+
+  .fl2 {
+    right: -1%;
+    top: 25%;
+  }
+
+  .fl3 {
+    left: 2%;
+    bottom: 15%;
+  }
+
+  .fl4 {
+    right: 1%;
+    bottom: 10%;
+  }
+
+  .hero .stats {
+    margin-top: 38px;
+  }
+}
