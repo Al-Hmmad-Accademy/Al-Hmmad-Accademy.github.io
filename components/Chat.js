@@ -10,11 +10,11 @@ import {
 } from 'lucide-react';
 
 const API =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app';
 
 const SOCKET_URL =
   process.env.NEXT_PUBLIC_SOCKET_URL ||
-  'http://localhost:5000';
+  'https://steps-accademy-backend-production.up.railway.app';
 
 export default function Chat({ user, selectedUserId = null }) {
   const [socket, setSocket] = useState(null);

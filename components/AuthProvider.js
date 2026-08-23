@@ -5,7 +5,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 const C = createContext();
 
 const API =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
