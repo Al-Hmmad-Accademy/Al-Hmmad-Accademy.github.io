@@ -7,7 +7,7 @@ const C = createContext();
 const API =
   process.env.NEXT_PUBLIC_API_URL ||
   'https://steps-accademy-backend-production.up.railway.app/api';
-  
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -68,6 +68,7 @@ export function AuthProvider({ children }) {
   const verify = async (body) => {
     const r = await fetch(`${API}/auth/verify-device`, {
       method: 'POST',
+      credentials: "include",
       headers: {
         'Content-Type': 'application/json',
       },
