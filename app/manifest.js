@@ -2,8 +2,8 @@ export const dynamic = 'force-static';
 
 export default function manifest() {
   return {
-    name: 'AALIYAAN SCIENCES ACADEMY',
-    short_name: 'Aaliyaan Academy',
+    name: 'STEP ACADEMY',
+    short_name: 'STEP Academy',
     description: 'Premium academic portal',
     start_url: '/',
     display: 'standalone',

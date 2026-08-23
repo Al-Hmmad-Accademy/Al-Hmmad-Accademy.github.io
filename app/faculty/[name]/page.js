@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const FACULTY_NAMES = [
-  'Engr. Aamir Hanif',
+  'Muhammad Saad',
   'Imtiyaz Hussain',
   'Khadim Rafique',
   'Bilal Ahmad',

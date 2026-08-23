@@ -1,5 +1,5 @@
 {
-  "name": "aaliyaan-sciences-academy-web",
+  "name": "Step-academy-web",
   "private": true,
   "scripts": {
     "dev": "next dev",

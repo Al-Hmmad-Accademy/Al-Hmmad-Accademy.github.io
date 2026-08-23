@@ -1,6 +1,6 @@
 import Link from 'next/link';import Reveal from '../components/Reveal';
 const teachers=[
-{name:'Engr. Aamir Hanif',subject:'Physics & Mathematics',education:'B.Sc Electrical Engineering, M.Sc Electrical Engineering',experience:'15+ years',image:'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80'},
+{name:'Muhammad Saad',subject:'Physics & Mathematics',education:'B.Sc Electrical Engineering, M.Sc Electrical Engineering',experience:'15+ years',image:'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80'},
 {name:'Imtiyaz Hussain',subject:'Islamic Studies & Pak Studies',education:'M.A Islamic Studies',experience:'12+ years',image:'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=80'},
 {name:'Khadim Rafique',subject:'English',education:'M.A English Literature',experience:'10+ years',image:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80'},
 {name:'Bilal Ahmad',subject:'Urdu',education:'M.A Urdu',experience:'9+ years',image:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80'},

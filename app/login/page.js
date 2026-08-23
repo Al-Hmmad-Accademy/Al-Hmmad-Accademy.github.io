@@ -166,7 +166,7 @@ export default function Login() {
           </h1>
 
           <p className="lead">
-            Choose your portal and securely sign in to AALIYAAN Sciences
+            Choose your portal and securely sign in to STEP ACCADEMY
             Academy.
           </p>
 
