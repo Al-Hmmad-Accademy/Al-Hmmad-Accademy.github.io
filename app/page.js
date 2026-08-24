@@ -7,6 +7,57 @@ const teachers=[
 {name:'Ahmer Ali',subject:'Biology',education:'M.Sc Biology',experience:'8+ years',image:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80'},
 {name:'Dr. Hamza Farooq',subject:'Chemistry',education:'PhD Chemistry',experience:'11+ years',image:'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80'}];
 const teach=[['Mathematics','Build problem-solving confidence through concepts, practice and exam strategy.','https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=80'],['Science','Understand science through visual concepts, experiments and application.','https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80'],['Languages','Strengthen English and Urdu communication, writing and comprehension.','https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=900&q=80'],['Islamic Studies','Develop knowledge, character and a strong academic foundation.','https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=80']];
+<Reveal>
+  <section className="section">
+    <div className="container">
+      <div className="section-head">
+        <div>
+          <div className="eyebrow">How We Teach</div>
+          <h2>A smarter way to learn.</h2>
+        </div>
+
+        <p className="lead">
+          We focus on understanding, practice and continuous improvement.
+        </p>
+      </div>
+
+      <div className="grid cards">
+        <div className="card">
+          <div className="card-body">
+            <span className="tag">01 · Understand</span>
+            <h3>Concept First</h3>
+            <p className="teacher-meta">
+              We make difficult topics simple through clear explanations
+              and practical examples.
+            </p>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-body">
+            <span className="tag">02 · Practice</span>
+            <h3>Practice With Purpose</h3>
+            <p className="teacher-meta">
+              Students strengthen their learning through structured
+              questions, tests and exam preparation.
+            </p>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-body">
+            <span className="tag">03 · Improve</span>
+            <h3>Track & Improve</h3>
+            <p className="teacher-meta">
+              Regular feedback helps students identify weaknesses and
+              steadily improve their performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Reveal>
 export default function Home(){return <><section className="hero"><div className="container" style={{display:'contents'}}><Reveal><div className="hero-copy"><div className="eyebrow">15 Years of Academic Excellence</div><h1>
   Where <span className="hero-highlight">ambition</span> becomes achievement.
 </h1><p className="lead">A focused academic environment where strong concepts, experienced teachers, disciplined preparation and personal guidance come together to build confident futures.</p><div className="hero-actions"><Link className="btn primary" href="/admission">Start Your Journey ↗</Link><Link className="btn" href="/faculty">Meet Our Faculty</Link></div><div className="stats"><div className="stat"><b>15+</b><small>Years of excellence</small></div><div className="stat"><b>4+</b><small>Academic pathways</small></div><div className="stat"><b>Focused</b><small>Faculty & mentoring</small></div></div></div></Reveal><Reveal><div className="hero-visual"><img className="hero-image" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=85" alt="A modern academic campus"/><span className="float-label fl1">QUALITY EDUCATION</span><span className="float-label fl2">EXPERIENCED FACULTY</span><span className="float-label fl3">CONCEPT BASED</span><span className="float-label fl4">STUDENT SUCCESS</span></div></Reveal></div></section><Reveal><section className="section"><div className="container"><div className="section-head"><div><div className="eyebrow">What We Teach</div><h2>Strong foundations. Clear direction.</h2></div><p className="lead">Every program is designed around understanding first, memorization second.</p></div><div className="grid cards">{teach.map(x=><div className="card" key={x[0]}><img className="image-card" src={x[2]} alt={x[0]} loading="lazy"/><div className="card-body"><h3>{x[0]}</h3><p className="teacher-meta">{x[1]}</p></div></div>)}</div></div></section></Reveal><section className="section" style={{background:'var(--panel)'}}><div className="container"><div className="section-head"><div><div className="eyebrow">Faculty Preview</div><h2>Teachers who make concepts click.</h2></div><Link className="btn" href="/faculty">View all faculty</Link></div><div className="grid cards">{teachers.map((t,i)=><Reveal key={t.name}><article className="card teacher-card"><img className="image-card" src={t.image} alt={t.name} loading={i>1?'lazy':'eager'}/><div className="card-body"><span className="tag">{t.subject}</span><h3 style={{marginTop:12}}>{t.name}</h3><p className="teacher-meta"><b>{t.experience}</b><br/>{t.education}</p><Link className="btn" href={`/faculty/${encodeURIComponent(t.name)}`}>View Details ↗</Link></div></article></Reveal>)}</div></div></section><Reveal><section className="section"><div className="container card" style={{padding:'55px'}}><div className="section-head" style={{marginBottom:0}}><div><div className="eyebrow">Student Success</div><h2>One place for learning, progress and support.</h2><p className="lead">Students get grades, announcements, files, tests, books, fees, chat and academic history in one secure portal.</p></div><Link className="btn primary" href="/login">Open Student Portal ↗</Link></div></div></section></Reveal></>}
