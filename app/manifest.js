@@ -2,8 +2,8 @@ export const dynamic = 'force-static';
 
 export default function manifest() {
   return {
-    name: 'STEP ACADEMY',
-    short_name: 'STEP Academy',
+    name: 'AL-Hammad ACADEMY',
+    short_name: 'AL-Hammad Academy',
     description: 'Premium academic portal',
     start_url: '/',
     display: 'standalone',

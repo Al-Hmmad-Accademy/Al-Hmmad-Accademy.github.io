@@ -2895,7 +2895,7 @@ function PageHeader({
         </Link>
 
         <div className="eyebrow">
-          STEP ACADEMY
+          AL-Hammad ACADEMY
         </div>
 
         <h1

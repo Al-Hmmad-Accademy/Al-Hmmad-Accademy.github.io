@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 const FACULTY_NAMES = [
   'Muhammad Saad',
-  'Imtiyaz Hussain',
-  'Khadim Rafique',
-  'Bilal Ahmad',
-  'Amer Raza',
+  'Ali Hussain',
+  'Muhammad Mujtabah',
+  'Haider Mustajab',
+  'Ahmer Ali',
   'Dr. Hamza Farooq',
   'Sara Ahmed',
   'Muhammad Kashif',

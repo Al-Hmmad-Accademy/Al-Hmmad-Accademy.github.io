@@ -104,7 +104,7 @@ export default function Contact() {
                 <div className="list-row">
                   <b>Email</b>
                   <span>
-                    info@stepacademy.example
+                    info@al-hammadacademy.example
                   </span>
                 </div>
 
