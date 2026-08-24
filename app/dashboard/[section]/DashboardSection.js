@@ -26,7 +26,7 @@ import { useAuth } from '../../../components/AuthProvider';
 import Chat from '../../../components/Chat';
 
 const API =
-  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app';
+  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app/api';
 
 const CLASSES = [
   'Pre 9',
