@@ -19,8 +19,8 @@ import {
 import { useAuth } from '../../components/AuthProvider';
 
 const API =
-  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app';
-
+  process.env.NEXT_PUBLIC_API_URL || 'https://steps-accademy-backend-production.up.railway.app/api';
+  
 const SECTIONS = [
   {
     key: 'students',
